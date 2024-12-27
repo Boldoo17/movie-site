@@ -25,10 +25,10 @@ export const fetchMovies = async (
     if (!response.ok) {
       throw new Error(`Failed to fetch data: ${response.statusText}`);
     }
-    return await response.json(); // JSON форматтай өгөгдөл буцаах
+    return await response.json();
   } catch (error) {
     console.error(error);
-    throw error; // Алдааг хэрэглэгчид дамжуулах
+    throw error;
   }
 };
 export const fetchFromTmdb = async (
@@ -48,7 +48,7 @@ export const fetchFromTmdb = async (
     if (!response.ok) {
       throw new Error(`Error fetching data: ${response.statusText}`);
     }
-    return await response.json(); // JSON формат руу хөрвүүлнэ.
+    return await response.json();
   } catch (error) {
     console.error("Error:", error);
     throw error;
